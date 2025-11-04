@@ -1,95 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christine Caponpon | Web Administrator Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Christine Caponpon — Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#internship">Experience</a>
-    <a href="#contact">Contact</a>
+  <nav class="nav">
+    <a class="nav-logo" href="#">Christine Caponpon</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#internship">Internship</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <header>
-    <h1>Christine Caponpon</h1>
-    <p>Web Administrator • Frontend Developer • BS Computer Science</p>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Christine Caponpon</h1>
+        <p class="lead">Frontend Developer • Solo Thesis: Coffee Shop Management System (POS, Inventory, OCR)</p>
 
-    <div class="profile-container">
-      <div class="profile-photo" style="background-image: url('profile.jpg');"></div>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn outline" href="Christine_Caponpon_Resume.pdf" download>Download Résumé</a>
+        </div>
+
+        <ul class="tech-inline" aria-hidden="true">
+          <li>Django</li><li>Python</li><li>JavaScript</li><li>OCR</li><li>MySQL</li>
+        </ul>
+      </div>
+
+      <div class="hero-photo">
+        <!-- rounded-square profile -->
+        <div class="profile-ss" style="background-image:url('profile.jpg')" role="img" aria-label="Profile photo"></div>
+        <p class="hero-caption">Solo thesis: built for Barista Espresso Bar — full-stack system + OCR-powered receipt parsing</p>
+      </div>
     </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a BS Computer Science graduate with experience as a Frontend Developer Intern
-      and hands-on development through my solo thesis: a complete coffeeshop management system.
-      I specialize in web maintenance, UI implementation, content management, and system handling.
-    </p>
+  <main>
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>
+        I recently graduated with a BS in Computer Science. During college I completed a solo thesis project — a full Coffee Shop Management System for a local client. I handled system architecture, frontend UI, backend logic (Django), and integrated OCR for automated receipt processing.
+      </p>
+      <p>
+        I also completed a frontend internship where I improved UI components, implemented responsive layouts, and assisted with API integrations and live site maintenance. I enjoy building clean interfaces and practical features that save time for real users.
+      </p>
+    </section>
 
-    <a href="Christine_Caponpon_Resume.pdf" class="resume-btn" download>📄 Download Resume</a>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="card"><h3>Web Administration</h3><p>Website maintenance, DNS basics, hosting, CMS, monitoring.</p></div>
-      <div class="card"><h3>Frontend Development</h3><p>HTML, CSS, JS, responsive UI, API integration.</p></div>
-      <div class="card"><h3>Tools & Tech</h3><p>Git, Django, Python, Figma, MySQL/SQLite.</p></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Project Gallery</h2>
-
-    <div class="projects-grid">
-      <div class="card">
-        <div class="project-img">Project 1 Screenshot</div>
-        <h3>Coffeeshop Management System</h3>
-        <p>Complete POS + Inventory + OCR system.</p>
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, modern JavaScript, responsive design, accessibility basics</p>
+        </div>
+        <div class="skill card">
+          <h3>Backend & Systems</h3>
+          <p>Django, Python, REST APIs, database modeling (MySQL/SQLite), deployments</p>
+        </div>
+        <div class="skill card">
+          <h3>Automation & OCR</h3>
+          <p>PaddleOCR/Tesseract integration, receipt parsing, preprocessing for OCR</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="project-img">Project 2 Screenshot</div>
-        <h3>POS Interface</h3>
-        <p>Custom POS UI with discounts & cart logic.</p>
+    <section id="projects" class="section container">
+      <h2>Project Gallery</h2>
+
+      <div class="projects-grid">
+        <!-- Card 1 -->
+        <article class="project card">
+          <div class="project-media">
+            <img src="proj1-1.jpg" alt="Coffeeshop dashboard screenshot" data-full="proj1-1.jpg">
+          </div>
+          <div class="project-body">
+            <h3>Coffeeshop Management System (Solo Thesis)</h3>
+            <p>Full POS, inventory with formula-based consumption, payroll & attendance, and OCR receipt automation that updates inventory.</p>
+            <div class="badges">
+              <span class="badge">Django</span><span class="badge">Python</span><span class="badge">OCR</span>
+            </div>
+            <button class="view-btn" data-gallery="proj1">View screenshots</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project card">
+          <div class="project-media">
+            <img src="proj2-1.jpg" alt="POS interface screenshot" data-full="proj2-1.jpg">
+          </div>
+          <div class="project-body">
+            <h3>POS Interface</h3>
+            <p>Custom POS UI with cart logic, item discounts, and quick item lookup. Frontend-focused improvements made during internship & thesis.</p>
+            <div class="badges">
+              <span class="badge">JavaScript</span><span class="badge">UX</span>
+            </div>
+            <button class="view-btn" data-gallery="proj2">View screenshots</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project card">
+          <div class="project-media">
+            <img src="proj3-1.jpg" alt="OCR processor screenshot" data-full="proj3-1.jpg">
+          </div>
+          <div class="project-body">
+            <h3>OCR Receipt Scanner</h3>
+            <p>Template-assisted OCR pipeline for parsing supermarket receipts — robust preprocessing, fuzzy-header matching and fallback parsing.</p>
+            <div class="badges">
+              <span class="badge">PaddleOCR</span><span class="badge">Parsing</span>
+            </div>
+            <button class="view-btn" data-gallery="proj3">View screenshots</button>
+          </div>
+        </article>
       </div>
+    </section>
 
+    <section id="internship" class="section container">
+      <h2>Internship — Frontend Developer</h2>
       <div class="card">
-        <div class="project-img">Project 3 Screenshot</div>
-        <h3>OCR Receipt Scanner</h3>
-        <p>Handles text extraction + structured parsing.</p>
+        <p>
+          During my internship I improved UI components, implemented responsive redesigns, assisted with API integrations, and participated in the maintenance of live sites. This experience strengthened my abilities to turn designs into reliable, accessible interfaces.
+        </p>
+        <ul class="intern-list">
+          <li>Implemented responsive layouts and cross-browser fixes</li>
+          <li>Collaborated with back-end to integrate REST APIs</li>
+          <li>Updated live content and assisted with deployment checks</li>
+        </ul>
       </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:caponponchris08@gmail.com">caponponchris08@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Christine Caponpon — Built with Django & JavaScript experiments</small>
+  </footer>
+
+  <!-- Gallery modal -->
+  <div id="galleryModal" class="modal" aria-hidden="true">
+    <button class="modal-close" aria-label="Close gallery">✕</button>
+    <div class="modal-inner"></div>
+    <div class="modal-controls">
+      <button class="modal-prev">◀</button>
+      <button class="modal-next">▶</button>
     </div>
-  </section>
-
-  <section id="internship">
-    <h2>Internship Experience</h2>
-    <div class="card">
-      <h3>Frontend Developer Intern</h3>
-      <p>Improved UI components, responsive layouts, content updates, API tasks, and live website maintenance.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: christinecpnpn@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/yourusername</p>
-  </section>
-
-  <footer>© 2025 Christine Joy Caponpon</footer>
-
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
