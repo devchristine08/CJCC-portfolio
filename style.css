@@ -1,8 +1,10 @@
 :root {
-  --black: #0a0a0a;
-  --white: #fafafa;
-  --gray: #eeeeee;
-  --accent: #1a1a1a;
+  --bg-light: #F2EFE7;
+  --accent-soft: #9ACBD0;
+  --accent-mid: #48A6A7;
+  --accent-dark: #006A71;
+  --text-dark: #0a0a0a;
+  --white: #ffffff;
 }
 
 * {
@@ -109,7 +111,7 @@ p {
   font-size: 1.05rem;
 }
 
-/* GRID / CARDS */
+
 .skills-grid, .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
