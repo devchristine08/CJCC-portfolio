@@ -4,91 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christine Caponpon | Web Administrator Portfolio</title>
+
   <style>
     :root {
       --black: #0a0a0a;
-      --white: #ffffff;
-      --gray: #f2f2f2;
+      --white: #fafafa;
+      --gray: #eeeeee;
       --accent: #1a1a1a;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--white);
-      color: var(--black);
       scroll-behavior: smooth;
     }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      padding-top: 80px;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 18px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    /* HEADER */
     header {
       height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to bottom, #000, #1b1b1b);
-      color: var(--white);
       text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(to bottom, #000, #191919);
+      color: var(--white);
+      animation: fadeIn 1.2s ease;
     }
+
     header h1 {
-      font-size: 3.2rem;
-      letter-spacing: 2px;
+      font-size: 3.3rem;
+      font-weight: 700;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.2rem;
-      opacity: 0.8;
+      opacity: 0.85;
     }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      z-index: 1000;
-    }
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.5;
-    }
+
+    /* SECTIONS */
     section {
       max-width: 1000px;
-      margin: 80px auto;
+      margin: 100px auto;
       padding: 0 20px;
+      animation: fadeInUp 1s ease;
     }
+
     h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
-      border-left: 6px solid var(--black);
+      margin-bottom: 25px;
+      font-weight: 700;
+      border-left: 5px solid #000;
       padding-left: 12px;
-      font-weight: bold;
     }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    /* GRID / CARDS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
+
     .card {
       background: var(--gray);
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
     .project-img {
       width: 100%;
       height: 230px;
       background: #ccc;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 20px;
       display: flex;
       justify-content: center;
@@ -96,15 +131,42 @@
       font-size: 0.9rem;
       color: #555;
     }
+
+    /* CONTACT */
+    #contact p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+    }
+
+    /* FOOTER */
     footer {
       background: #000;
-      color: #fff;
+      color: var(--white);
       text-align: center;
-      padding: 50px 20px;
-      margin-top: 60px;
+      padding: 40px 20px;
+      margin-top: 80px;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.4rem; }
+      nav { gap: 20px; }
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -124,52 +186,60 @@
     <h2>About Me</h2>
     <p>
       I am a BS Computer Science graduate with experience as a Frontend Developer Intern
-      and hands-on development through my solo thesis: a complete coffeeshop management system
-      built for a real business client. I specialize in web maintenance, UI implementation,
-      content management, and system handling—skills directly aligned with Web Administration.
+      and hands-on development through my solo thesis: a complete coffeeshop management
+      system built for a real business client. I specialize in web maintenance, UI implementation,
+      content management, website operations, and system handling—skills strongly aligned with Web Administration.
     </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
+
     <div class="skills-grid">
       <div class="card">
         <h3>Web Administration</h3>
-        <p>Website maintenance, hosting & DNS basics, CMS operations, performance checks, documentation.</p>
+        <p>Website maintenance, DNS basics, hosting management, CMS updates, performance monitoring, documentation, troubleshooting.</p>
       </div>
+
       <div class="card">
         <h3>Frontend Development</h3>
-        <p>HTML5, CSS3, JavaScript, mobile-responsive design, API integration.</p>
+        <p>HTML5, CSS3, JavaScript, mobile-responsive UI, API integration, layout optimization.</p>
       </div>
+
       <div class="card">
         <h3>Tools & Technologies</h3>
-        <p>Git/GitHub, Django, Python, Figma, VS Code, browser DevTools, SQLite/MySQL.</p>
+        <p>Git/GitHub, Django, Python, Figma, VS Code, SQLite/MySQL, browser DevTools.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Featured Project</h2>
+
     <div class="card">
-      <div class="project-img">Project Screenshot Placeholder</div>
+      <div class="project-img">Screenshot Placeholder</div>
+
       <h3>Coffeeshop Management System (Solo Thesis)</h3>
+
       <p>
-        A complete management system built for Barista Espresso Bar. Features include POS with discounts,
-        automated inventory tracking, OCR-powered receipt scanning, payroll generation, attendance logging
-        with photo verification, and an admin dashboard.
+        A complete management system built for Barista Espresso Bar. Features include POS
+        with discounts, automated inventory tracking, OCR-powered receipt scanning, payroll generation,
+        attendance logging with photo verification, and an admin dashboard for operations.
       </p>
-      <p><strong>Tech Stack:</strong> Django, Python, JavaScript, HTML, CSS, SQLite/MySQL, OCR (PaddleOCR/Tesseract)</p>
+
+      <p><strong>Tech Stack:</strong> Django, Python, JavaScript, HTML, CSS, SQLite/MySQL, PaddleOCR</p>
     </div>
   </section>
 
   <section id="internship">
     <h2>Internship Experience</h2>
+
     <div class="card">
       <h3>Frontend Developer Intern</h3>
       <p>
-        Improved UI components, implemented responsive redesigns, updated site content, and assisted with
-        API-integrated features. Gained experience in maintaining and updating live websites—critical
-        tasks in Web Administration roles.
+        Improved UI components, implemented responsive layouts, updated website content,
+        and assisted with API-integrated features. Gained experience maintaining and updating
+        live websites—core responsibilities in Web Administration.
       </p>
     </div>
   </section>
@@ -182,7 +252,8 @@
   </section>
 
   <footer>
-    <p>© 2025 Christine Caponpon</p>
+    © 2025 Christine Caponpon
   </footer>
+
 </body>
 </html>
