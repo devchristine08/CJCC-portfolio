@@ -1,74 +1,68 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christine Joy Caponpon | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#internship">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#internship">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="profile-photo"></div>
-      <h1>Christine Joy Caponpon</h1>
-      <p class="tagline">BS Computer Science • Frontend Developer</p>
-      <a href="Christine_Joy_Caponpon_Resume.pdf" class="hero-btn" download>📄 Download Resume</a>
+  <header>
+    <h1>Christine Joy Caponpon</h1>
+    <p> BS Computer Science • Frontend Developer </p>
+
+    <div class="profile-container">
+      <div class="profile-photo" style="background-image: url('profile.jpg');"></div>
     </div>
   </header>
 
-  <section id="about" class="section fade-up">
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I am a BS Computer Science graduate with experience as a Frontend Developer Intern
       and hands-on development through my solo thesis: a complete coffeeshop management system.
       I specialize in web maintenance, UI implementation, content management, and system handling.
     </p>
+
+    <a href="Christine_Joy_Caponpon_Resume.pdf" class="resume-btn" download>📄 Download Resume</a>
   </section>
 
-  <section id="skills" class="section fade-up">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="card"><h3>Web Administration</h3><p>Website maintenance, DNS basics, hosting, CMS, monitoring.</p></div>
+      <div class="card"><h3>Web Administration</h3><p>Website maintenance, DNS basics, hosting, monitoring.</p></div>
       <div class="card"><h3>Frontend Development</h3><p>HTML, CSS, JS, responsive UI, API integration.</p></div>
       <div class="card"><h3>Tools & Tech</h3><p>Git, Django, Python, Figma, MySQL/SQLite.</p></div>
     </div>
   </section>
 
-  <section id="projects" class="section fade-up">
-    <h2>Project Gallery</h2>
-    <div class="projects-grid">
-      <div class="card project-card">
-        <div class="project-img" style="background-image: url('images/project1.jpg');"></div>
-        <h3>Coffeeshop Management System</h3>
-        <p>Complete POS + Inventory + OCR system.</p>
-      </div>
-      <div class="card project-card">
-        <div class="project-img" style="background-image: url('images/project2.jpg');"></div>
-        <h3>POS Interface</h3>
-        <p>Custom POS UI with discounts & cart logic.</p>
-      </div>
-      <div class="card project-card">
-        <div class="project-img" style="background-image: url('images/project3.jpg');"></div>
-        <h3>OCR Receipt Scanner</h3>
-        <p>Handles text extraction + structured parsing.</p>
+   <section id="projects">
+    <h2>Featured Project</h2>
+
+    <div class="card">
+      <h3>Coffeeshop Management System</h3>
+      <p>A complete system including POS, inventory tracking, OCR receipt scanning, payroll, and attendance.</p>
+
+      <div class="featured-gallery">
+        <img src="screenshot1.jpg" alt="Project Screenshot 1">
+        <img src="screenshot2.jpg" alt="Project Screenshot 2">
+        <img src="screenshot3.jpg" alt="Project Screenshot 3">
       </div>
     </div>
   </section>
 
-  <section id="internship" class="section fade-up">
+  <section id="internship">
     <h2>Internship Experience</h2>
     <div class="card">
       <h3>Frontend Developer Intern</h3>
@@ -76,14 +70,15 @@
     </div>
   </section>
 
-  <section id="contact" class="section fade-up">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: caponponchristinejoy@gmail.com</p>
+    <p>Email:  caponponchristinejoy@gmail.com </p>
     <p>LinkedIn: linkedin.com/in/christine-caponpon-139bb1312</p>
     <p>GitHub: github.com/devchristine08</p>
   </section>
 
   <footer>© 2025 Christine Joy Caponpon</footer>
+
 
   <script src="script.js"></script>
 </body>
